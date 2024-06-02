@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #575cbe 50%, #003089 100%);
+    padding: 10px;
+}
+
+#todo-box{
+    width: 100%;
+    max-width: 550px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    background: rgba(233, 233, 233, 0.466);
+    box-shadow: 0 4px 8px rgba(20, 19, 19, 0.2);
+}
+#logo{
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+}
+#todo-box h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#add {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+  }
+  
+#add {
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    background-image: linear-gradient(135deg, #92eefe 0%, #5754ea 100%);
+    box-shadow: 0 20px 30px -6px rgba(99, 97, 238, 0.5);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    color: white;
+  }
+  
+  #add:hover {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
+  
+  #add:active {
+    opacity: 0.5;
+  }
+
+  #input-container{
+    width: 350px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #92eefe 0%, #5754ea 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  }
+  #input-box{
+    width: 340px;
+    height: 40px;
+    border: none;
+    outline: none;
+    caret-color: rgb(255, 81, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
+  }
+  #input-box:focus form {
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 18px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    color: #002765;
+    position: relative;
+}
+ul li::before{
+    content: " ";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(assets/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: grey;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(assets/checked3.jpg);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+    color: #003089;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: rgba(243, 243, 243, 0.404);
+}
